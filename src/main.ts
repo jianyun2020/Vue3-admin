@@ -1,9 +1,22 @@
 import { createApp } from 'vue';
-import { ElButton } from 'element-plus';
+import 'normalize.css'
+import { ElButton, ElForm, ElFormItem, ElInput } from 'element-plus';
 
 import App from './App.vue';
 import router from './router';
 import store from './store';
 
-createApp(App).use(store).use(router).use(ElButton)
-  .mount('#app');
+const components = [
+  ElButton,
+  ElForm,
+  ElFormItem,
+  ElInput
+]
+
+const app = createApp(App)
+
+components.forEach(component => {
+  app.use(component)
+})
+
+app.use(store).use(router).mount('#app');
