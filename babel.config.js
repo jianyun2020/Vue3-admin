@@ -10,10 +10,6 @@ module.exports = {
           return `element-plus/packages/theme-chalk/src/${name}.scss`;
         },
       },
-      {
-        libraryName: 'element-plus',
-        customStyleName: (name) => `element-plus/lib/theme-chalk/${name}.css`,
-      },
     ],
   ],
 };
